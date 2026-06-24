@@ -16,24 +16,7 @@
   </header>
 
   <main class="content inner">
-    <ul class="project-list">
-      <li>
-        <a href="https://open.spotify.com/track/2DllA6hfBk3wiA2TXDpyyu" target="_blank" rel="noopener">Marjorie</a>
-        <span class="project-meta">Taylor Michaels, The Grotto · Spotify · 2024</span>
-      </li>
-      <li>
-        <a href="https://open.spotify.com/track/4tBwJACA5W9l0hYSqdsPCo?si=be3ee5ad795843f1" target="_blank" rel="noopener">Milestones</a>
-        <span class="project-meta">Taylor Michaels, The Grotto · Spotify · 2024</span>
-      </li>
-      <li>
-        <a href="https://open.spotify.com/track/4IPjkbIWMfpB7WSwmZlmce?si=c1b8b8b181464dd9" target="_blank" rel="noopener">Chasing Cars</a>
-        <span class="project-meta">Spotify</span>
-      </li>
-      <li>
-        <a href="https://on.soundcloud.com/SQMsKnGZhVhED4WIYM" target="_blank" rel="noopener">Souvenir</a>
-        <span class="project-meta">SoundCloud</span>
-      </li>
-    </ul>
+    <section id="music" class="shows-grid" aria-label="music work"></section>
   </main>
 
   <footer class="site-footer">
@@ -41,5 +24,26 @@
       <p>© Taylor Michaels</p>
     </div>
   </footer>
+
+  <script type="module">
+    import { createMediaCard, renderRoles, episodeLabel }
+    from "./scripts/rendercards.js";
+    import { music }
+    from "./data/collections.js";
+
+    const music_grid = document.getElementById("music");
+
+    music.forEach((show) => {
+      const { card, meta } = createMediaCard(show);
+
+      meta.innerHTML = `
+        <h3>${show.title}</h3>
+        <p class="stats">${show.years}</p>
+        ${renderRoles(show.roles)}
+      `;
+
+      music_grid.appendChild(card);
+    });
+  </script>
 </body>
 </html>

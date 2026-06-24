@@ -252,6 +252,8 @@ a:hover {
   border-radius: var(--radius);
   overflow: hidden;
   transition: border-color 0.15s ease, transform 0.15s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .show-card:hover {

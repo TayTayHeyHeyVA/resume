@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experience — Taylor Michaels</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <h1>Experience</h1>
+      <p class="tagline">Audiodrama credits — shows, years, episode counts, and roles</p>
+      <a class="nav-link" href="index.html">← Back to home</a>
+    </div>
+  </header>
+
+  <main class="content inner">
+    <div class="section-intro">
+      <h2>Audiodrama Credits</h2>
+      <p>All audiodrama work from the resume. Artwork placeholders — swap in show logos when ready.</p>
+    </div>
+
+    <section id="shows" class="shows-grid" aria-label="Audiodrama credits"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p>© Taylor Michaels</p>
+    </div>
+  </footer>
+
+  <script>
+    const shows = [
+      {
+        title: "The Grotto",
+        years: "2023 – Present",
+        episodes: 11,
+        roles: ["David (Principal)"]
+      },
+      {
+        title: "WOE.BEGONE",
+        years: "2023 – Present",
+        episodes: 29,
+        roles: ["Chance (Supporting)"]
+      },
+      {
+        title: "Forged Bonds",
+        years: "2024 – Present",
+        episodes: 20,
+        roles: ["Ares (Principal)"]
+      },
+      {
+        title: "Fresh Meat",
+        years: "2025 – Present",
+        episodes: 6,
+        roles: ["Cooper Hackl (Principal)"]
+      },
+      {
+        title: "Soul Operator",
+        years: "2024 – Present",
+        episodes: 7,
+        roles: ["Extra (Bit)"]
+      },
+      {
+        title: "[REDACTED]",
+        years: "2025 – Present",
+        episodes: 1,
+        roles: ["Mars Donovan"]
+      },
+      {
+        title: "Nowhere, On Air",
+        years: "2023 – Present",
+        episodes: 4,
+        roles: ["Chip Roberts (Principal)", "Ominous Sponsor (Supporting)"]
+      },
+      {
+        title: "Someone Dies in this Elevator",
+        years: "2025",
+        episodes: 5,
+        roles: [
+          "Narrator (Principal)",
+          "Archer, Walter (Principal)",
+          "Employee, Voice 2 (Supporting)"
+        ]
+      },
+      {
+        title: "The Storage Papers",
+        years: "2024 – 2025",
+        episodes: 2,
+        roles: ["Jeremy Jones (Supporting)", "Oliver Daniels (Bit)"]
+      },
+      {
+        title: "Wake of Corrosion",
+        years: "2023 – 2024",
+        episodes: 2,
+        roles: ["Survivor 1 (Principal)", "Guest Narrator (Supporting)"]
+      },
+      {
+        title: "Breathing Space",
+        years: "2024",
+        episodes: 4,
+        roles: ["Martie Ettal, Pityr (Supporting)", "Deadlight, Tent Owner (Bit)"]
+      },
+      {
+        title: "Hi Nay",
+        years: "2025",
+        episodes: 3,
+        roles: ["Motzie Dapul (Supporting)", "Barista 2 (Bit)"]
+      },
+      {
+        title: "Somewhere, Ohio",
+        years: "2023",
+        episodes: 2,
+        roles: ["Fern Daemon, Boris (Supporting)"]
+      },
+      {
+        title: "Nine to Midnight",
+        years: "2024",
+        episodes: 2,
+        roles: ["Bryce, Self (Principal)"]
+      },
+      {
+        title: "SCP Un[REDACTED]",
+        years: "2025",
+        episodes: 1,
+        roles: ["Agent Jones (Supporting)"]
+      },
+      {
+        title: "Tales from the Fringes of Reality",
+        years: "2024",
+        episodes: 5,
+        roles: ["Winston (Supporting)"]
+      },
+      {
+        title: "400 Words a Horror",
+        years: "2024",
+        episodes: 2,
+        roles: ["The Contractor (Principal)", "Television Host (Supporting)"]
+      },
+      {
+        title: "Among the Stacks",
+        years: "2023",
+        episodes: 2,
+        roles: ["Dr. Arawn (Principal)", "Guest Narrator (Supporting)"]
+      },
+      {
+        title: "No Return",
+        years: "2024 – Present",
+        episodes: 3,
+        roles: ["Biksune Ree (Supporting)", "Saurian 2, Villager (Bit)"]
+      },
+      {
+        title: "Audistorium",
+        years: "2024",
+        episodes: 1,
+        roles: ["Prey 2 (Bit)"]
+      },
+      {
+        title: "Hollow Disciple",
+        years: "2025",
+        episodes: 2,
+        roles: ["Officer Lowley (Supporting)"]
+      }
+    ];
+
+    const grid = document.getElementById("shows");
+
+    function episodeLabel(count) {
+      return `${count} episode${count === 1 ? "" : "s"}`;
+    }
+
+    function renderRoles(roles) {
+      if (roles.length === 1) {
+        return `<p class="roles">${roles[0]}</p>`;
+      }
+      const items = roles.map((role) => `<li>${role}</li>`).join("");
+      return `<ul class="roles">${items}</ul>`;
+    }
+
+    shows.forEach((show) => {
+      const card = document.createElement("article");
+      card.className = "show-card";
+
+      const art = document.createElement("div");
+      art.className = "show-art";
+      art.setAttribute("aria-hidden", "true");
+      const label = document.createElement("span");
+      label.textContent = show.title;
+      art.appendChild(label);
+
+      const meta = document.createElement("div");
+      meta.className = "show-meta";
+      meta.innerHTML = `
+        <h3>${show.title}</h3>
+        <p class="stats">${show.years} · ${episodeLabel(show.episodes)}</p>
+        ${renderRoles(show.roles)}
+      `;
+
+      card.appendChild(art);
+      card.appendChild(meta);
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>

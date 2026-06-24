@@ -1,64 +1,51 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Taylor Michaels — Resume (Basic)</title>
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:0;padding:2rem;background:#f7fafc;color:#0f172a}
-    header{max-width:900px;margin:0 auto 1.5rem;padding:1.25rem 1.5rem;background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
-    h1{margin:.25rem 0;font-size:1.6rem}
-    p.lead{margin:0;color:#334155}
-    section{max-width:900px;margin:1rem auto;padding:1.25rem;background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
-    dl{display:grid;grid-template-columns:150px 1fr;row-gap:.5rem}
-    dt{font-weight:600;color:#0f172a}
-    a{color:#0ea5e9}
-    footer{max-width:900px;margin:1rem auto;text-align:center;color:#64748b}
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taylor Michaels — Vocal Resume</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Taylor Michaels — Vocal Resume (basic)</h1>
-    <p class="lead">Repository: <a href="https://github.com/TayTayHeyHeyVA/resume">TayTayHeyHeyVA/resume</a></p>
+  <header class="site-header">
+    <div class="inner">
+      <h1>Taylor Michaels</h1>
+      <p class="tagline">Voice Actor · Sound Designer · Singer</p>
+      <p class="contact">
+        <strong>Email:</strong>
+        <a href="mailto:TaylorMichaels.VA@gmail.com">TaylorMichaels.VA@gmail.com</a>
+      </p>
+      <p class="equipment">
+        <strong>Equipment:</strong> Shure SM7B · Cloudlifter CL-1 · MOTU M2
+      </p>
+    </div>
   </header>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:TaylorMichaels.VA@gmail.com">TaylorMichaels.VA@gmail.com</a></p>
-    <p>Alternate: <a href="mailto:TaylorMichaelsTJM@gmail.com">TaylorMichaelsTJM@gmail.com</a></p>
-  </section>
+  <main class="content inner">
+    <nav class="nav-grid" aria-label="Site sections">
+      <a class="nav-card" href="demo-reel.html">
+        <span class="nav-card-title">Demo Reel</span>
+        <span class="nav-card-desc">Voice acting reel on YouTube</span>
+      </a>
+      <a class="nav-card" href="experience.html">
+        <span class="nav-card-title">Experience</span>
+        <span class="nav-card-desc">Audiodrama credits and roles</span>
+      </a>
+      <a class="nav-card" href="self-produced.html">
+        <span class="nav-card-title">Self-Produced Works</span>
+        <span class="nav-card-desc">Original podcasts, audio, and video</span>
+      </a>
+      <a class="nav-card" href="music.html">
+        <span class="nav-card-title">Music</span>
+        <span class="nav-card-desc">Recorded songs and covers</span>
+      </a>
+    </nav>
+  </main>
 
-  <section>
-    <h2>Repository summary</h2>
-    <dl>
-      <dt>Repository</dt>
-      <dd><a href="https://github.com/TayTayHeyHeyVA/resume">TayTayHeyHeyVA/resume</a></dd>
-
-      <dt>Repo ID</dt>
-      <dd>1278530156</dd>
-
-      <dt>Language composition</dt>
-      <dd>
-        <ul>
-          <li>HTML: 7,309 bytes (as reported)</li>
-        </ul>
-      </dd>
-
-      <dt>PDF (source)</dt>
-      <dd>Taylor Michaels Vocal Resume _ Dec '25.pdf (included in repository)</dd>
-    </dl>
-  </section>
-
-  <section>
-    <h2>Quick links</h2>
-    <ul>
-      <li><a href="https://github.com/TayTayHeyHeyVA/resume">View repository on GitHub</a></li>
-      <li><a href="https://github.com/TayTayHeyHeyVA/resume/blob/main/Taylor%20Michaels%20Vocal%20Resume%20_%20Dec%20'25.pdf">Open PDF (raw file path may vary)</a></li>
-    </ul>
-  </section>
-
-  <footer>
-    Generated: basic GitHub Pages index (docs/index.html)
+  <footer class="site-footer">
+    <div class="inner">
+      <p>© Taylor Michaels</p>
+    </div>
   </footer>
 </body>
 </html>

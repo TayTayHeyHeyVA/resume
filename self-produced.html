@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Self-Produced Works — Taylor Michaels</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <h1>Self-Produced Works</h1>
+      <p class="tagline">Original content I've written and/or produced</p>
+      <a class="nav-link" href="index.html">← Back to home</a>
+    </div>
+  </header>
+
+  <main class="content inner">
+    <div class="section-intro">
+      <h2>YouTube</h2>
+    </div>
+
+    <section id="youtube_array" class="shows-grid" aria-label="youtube work"></section>
+
+    <br></br>
+
+    <div class="section-intro">
+      <h2>Audio Drama</h2>
+    </div>
+
+    <section id="bts_array" class="shows-grid" aria-label="bts work"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p>© Taylor Michaels</p>
+    </div>
+  </footer>
+
+  <script>
+    const youtube_array = [
+      {
+        title: "What's on Mars",
+        artwork: "images/mars.jpg",
+        years: "2025-2026",
+        roles: ["Writer, Videographer, Performer, Sound Designer, Producer"]
+      }
+    ];
+
+    const youtube_grid = document.getElementById("youtube_array");
+
+    function renderRoles(roles) {
+      const items = roles.map((role) => `<p class="roles"><i>${role}</i></p>`).join("");
+      return `${items}`;
+    }
+
+    youtube_array.forEach((youtube) => {
+      const card = document.createElement("article");
+      card.className = "show-card";
+
+      const art = document.createElement("div");
+      art.className = "show-art";
+      art.setAttribute("aria-hidden", "true");
+
+      const meta = document.createElement("div");
+      meta.className = "show-meta";
+      meta.innerHTML = `
+        <h3>${youtube.title}</h3>
+        <p class="stats">${youtube.years}</p>
+        ${renderRoles(youtube.roles)}
+      `;
+
+      if (youtube.artwork) {
+        const img = document.createElement("img");
+        img.src = youtube.artwork;
+        img.alt = `${youtube.title} cover art`;
+        img.loading = "lazy";
+
+        art.appendChild(img);
+      }
+
+      card.appendChild(art);
+      card.appendChild(meta);
+      youtube_grid.appendChild(card);
+    });
+  </script>
+
+  <script>
+    const bts_array = [
+      {
+        title: "The In-Between",
+        artwork: "images/in-between.jfif",
+        years: "2025",
+        roles: ["Writer, Narrator, Sound Designer, Producer"]
+      },
+      {
+        title: "Do Not Disclose",
+        artwork: "images/disclose.jfif",
+        years: "2025",
+        roles: ["Script Editor, Sound Designer, Producer"]
+      },
+      {
+        title: "Perchance to Dream",
+        artwork: "images/dream.jpg",
+        years: "2024",
+        roles: ["Writer, Narrator, Sound Designer, Producer"]
+      },
+      {
+        title: "Avast.",
+        artwork: "images/avast.jpeg",
+        years: "2024",
+        roles: ["Writer, Narrator, Sound Designer, Producer"]
+      },
+      {
+        title: "Mission Log",
+        artwork: "images/log.jfif",
+        years: "2024",
+        roles: ["Script Editor, Sound Designer, Producer"]
+      },
+    ];
+
+    const bts_grid = document.getElementById("bts_array");
+
+    function renderRoles(roles) {
+      const items = roles.map((role) => `<p class="roles"><i>${role}</i></p>`).join("");
+      return `${items}`;
+    }
+
+    bts_array.forEach((bts) => {
+      const card = document.createElement("article");
+      card.className = "show-card";
+
+      const art = document.createElement("div");
+      art.className = "show-art";
+      art.setAttribute("aria-hidden", "true");
+
+      const meta = document.createElement("div");
+      meta.className = "show-meta";
+      meta.innerHTML = `
+        <h3>${bts.title}</h3>
+        <p class="stats">${bts.years}</p>
+        ${renderRoles(bts.roles)}
+      `;
+
+      if (bts.artwork) {
+        const img = document.createElement("img");
+        img.src = bts.artwork;
+        img.alt = `${bts.title} cover art`;
+        img.loading = "lazy";
+
+        art.appendChild(img);
+      }
+
+      card.appendChild(art);
+      card.appendChild(meta);
+      bts_grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>

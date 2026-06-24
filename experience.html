@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experience — Taylor Michaels</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <h1>Experience</h1>
+      <p class="tagline">Credits, roles, and behind-the-scenes work</p>
+      <a class="nav-link" href="index.html">← Back to home</a>
+    </div>
+  </header>
+
+  <main class="content inner">
+    <div class="section-intro">
+      <h2>Audio Drama Credits</h2>
+    </div>
+
+    <section id="shows" class="shows-grid" aria-label="Audiodrama credits"></section>
+
+    <br></br>
+
+    <div class="section-intro">
+      <h2>Behind-the-Scenes Work</h2>
+    </div>
+
+    <section id="bts_array" class="shows-grid" aria-label="bts work"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p>© Taylor Michaels</p>
+    </div>
+  </footer>
+
+  <script>
+    const shows = [
+      {
+        title: "The Grotto",
+        artwork: "images/grotto.jpg",
+        years: "2023 – Present",
+        episodes: 11,
+        roles: ["David (Principal)"]
+      },
+      {
+        title: "WOE.BEGONE",
+        artwork: "images/wbg.jpg",
+        years: "2023 – Present",
+        episodes: 29,
+        roles: ["Chance (Supporting)"]
+      },
+      {
+        title: "Forged Bonds",
+        artwork: "images/forged-bonds.jfif",
+        years: "2024 – Present",
+        episodes: 20,
+        roles: ["Ares (Principal)"]
+      },
+      {
+        title: "Fresh Meat",
+        artwork: "images/fresh-meat.jfif",
+        years: "2025 – Present",
+        episodes: 6,
+        roles: ["Cooper Hackl (Principal)"]
+      },
+      {
+        title: "Soul Operator",
+        artwork: "images/soul-operator.jfif",
+        years: "2024 – Present",
+        episodes: 7,
+        roles: ["Extra (Bit)"]
+      },
+      {
+        title: "[REDACTED]",
+        artwork: "images/redacted.jfif",
+        years: "2025 – Present",
+        episodes: 1,
+        roles: ["Mars Donovan (Supporting)"]
+      },
+      {
+        title: "Nowhere, On Air",
+        artwork: "images/nowhere-on-air.jfif",
+        years: "2023 – Present",
+        episodes: 4,
+        roles: ["Chip Roberts (Principal)", "Ominous Sponsor (Supporting)"]
+      },
+      {
+        title: "Someone Dies in this Elevator",
+        artwork: "images/someone-dies.jfif",
+        years: "2025",
+        episodes: 5,
+        roles: [
+          "Narrator (Principal)",
+          "Archer, Walter (Principal)",
+          "Employee, Voice 2 (Supporting)"
+        ]
+      },
+      {
+        title: "The Storage Papers",
+        artwork: "images/tsp.jfif",
+        years: "2024 – 2025",
+        episodes: 2,
+        roles: ["Jeremy Jones (Supporting)", "Oliver Daniels (Bit)"]
+      },
+      {
+        title: "Wake of Corrosion",
+        artwork: "images/wake.jfif",
+        years: "2023 – 2024",
+        episodes: 2,
+        roles: ["Survivor 1 (Principal)", "Guest Narrator (Supporting)"]
+      },
+      {
+        title: "Breathing Space",
+        artwork: "images/breathing-space.jfif",
+        years: "2024",
+        episodes: 4,
+        roles: ["Martie Ettal, Pityr (Supporting)", "Deadlight, Tent Owner (Bit)"]
+      },
+      {
+        title: "Hi Nay",
+        artwork: "images/hi-nay.jfif",
+        years: "2025",
+        episodes: 3,
+        roles: ["Motzie Dapul (Supporting)", "Barista 2 (Bit)"]
+      },
+      {
+        title: "Somewhere, Ohio",
+        artwork: "images/ohio.jfif",
+        years: "2023",
+        episodes: 2,
+        roles: ["Fern Daemon, Boris (Supporting)"]
+      },
+      {
+        title: "Nine to Midnight",
+        artwork: "images/n2m.jfif",
+        years: "2024",
+        episodes: 2,
+        roles: ["Bryce, Self (Principal)"]
+      },
+      {
+        title: "SCP Un[REDACTED]",
+        artwork: "images/scp.jfif",
+        years: "2025",
+        episodes: 1,
+        roles: ["Agent Jones (Supporting)"]
+      },
+      {
+        title: "Tales from the Fringes of Reality",
+        artwork: "images/fringes.jfif",
+        years: "2024",
+        episodes: 5,
+        roles: ["Winston (Supporting)"]
+      },
+      {
+        title: "400 Words a Horror",
+        artwork: "images/400.jfif",
+        years: "2024",
+        episodes: 2,
+        roles: ["The Contractor (Principal)", "Television Host (Supporting)"]
+      },
+      {
+        title: "Among the Stacks",
+        artwork: "images/stacks.jfif",
+        years: "2023",
+        episodes: 2,
+        roles: ["Dr. Arawn (Principal)", "Guest Narrator (Supporting)"]
+      },
+      {
+        title: "No Return",
+        artwork: "images/no-return.jfif",
+        years: "2024 – Present",
+        episodes: 3,
+        roles: ["Biksune Ree (Supporting)", "Saurian 2, Villager (Bit)"]
+      },
+      {
+        title: "Audistorium",
+        artwork: "images/audistorium.jfif",
+        years: "2024",
+        episodes: 1,
+        roles: ["Prey 2 (Bit)"]
+      },
+      {
+        title: "Hollow Disciple",
+        artwork: "images/hollow.jfif",
+        years: "2025",
+        episodes: 2,
+        roles: ["Officer Lowley (Supporting)"]
+      }
+    ];
+
+    const grid = document.getElementById("shows");
+
+    function episodeLabel(count) {
+      return `${count} episode${count === 1 ? "" : "s"}`;
+    }
+
+    function renderRoles(roles) {
+      const items = roles.map((role) => `<p class="roles"><i>${role}</i></p>`).join("");
+      return `${items}`;
+    }
+
+    shows.forEach((show) => {
+      const card = document.createElement("article");
+      card.className = "show-card";
+
+      const art = document.createElement("div");
+      art.className = "show-art";
+      art.setAttribute("aria-hidden", "true");
+
+      const meta = document.createElement("div");
+      meta.className = "show-meta";
+      meta.innerHTML = `
+        <h3>${show.title}</h3>
+        <p class="stats">${episodeLabel(show.episodes)} | ${show.years}</p>
+        ${renderRoles(show.roles)}
+      `;
+
+      if (show.artwork) {
+      const img = document.createElement("img");
+      img.src = show.artwork;
+        img.alt = `${show.title} cover art`;
+        img.loading = "lazy";
+
+        art.appendChild(img);
+      }
+
+      card.appendChild(art);
+      card.appendChild(meta);
+      grid.appendChild(card);
+    });
+  </script>
+
+  <script>
+    const bts_array = [
+      {
+        title: "What's on Mars",
+        artwork: "images/mars.jpg",
+        years: "2025-2026",
+        roles: ["Writer, Videographer, Performer, Sound Designer, Producer"]
+      },
+      {
+        title: "The In-Between",
+        artwork: "images/in-between.jfif",
+        years: "2025",
+        roles: ["Writer, Narrator, Sound Designer, Producer"]
+      },
+      {
+        title: "Do Not Disclose",
+        artwork: "images/disclose.jfif",
+        years: "2025",
+        roles: ["Script Editor, Sound Designer, Producer"]
+      },
+      {
+        title: "Avast.",
+        artwork: "images/avast.jpeg",
+        years: "2024",
+        roles: ["Writer, Narrator, Sound Designer, Producer"]
+      },
+      {
+        title: "Perchance to Dream",
+        artwork: "images/dream.jpg",
+        years: "2024",
+        roles: ["Writer, Narrator, Sound Designer, Producer"]
+      },
+      {
+        title: "Mission Log",
+        artwork: "images/log.jfif",
+        years: "2024",
+        roles: ["Script Editor, Sound Designer, Producer"]
+      },
+    ];
+
+    const bts_grid = document.getElementById("bts_array");
+
+    function renderRoles(roles) {
+      const items = roles.map((role) => `<p class="roles"><i>${role}</i></p>`).join("");
+      return `${items}`;
+    }
+
+    bts_array.forEach((bts) => {
+      const card = document.createElement("article");
+      card.className = "show-card";
+
+      const art = document.createElement("div");
+      art.className = "show-art";
+      art.setAttribute("aria-hidden", "true");
+
+      const meta = document.createElement("div");
+      meta.className = "show-meta";
+      meta.innerHTML = `
+        <h3>${bts.title}</h3>
+        <p class="stats">${bts.years}</p>
+        ${renderRoles(bts.roles)}
+      `;
+
+      if (bts.artwork) {
+        const img = document.createElement("img");
+        img.src = bts.artwork;
+        img.alt = `${bts.title} cover art`;
+        img.loading = "lazy";
+
+        art.appendChild(img);
+      }
+
+      card.appendChild(art);
+      card.appendChild(meta);
+      bts_grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>

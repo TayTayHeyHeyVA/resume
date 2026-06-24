@@ -8,6 +8,14 @@ export const audiodramas = [
       roles: ["David (Principal)"]
     },
     {
+      title: "[REDACTED]",
+      artwork: "images/redacted.jfif",
+      url: "https://www.theredactedunit.com/",
+      years: "2025 – Present",
+      episodes: 3,
+      roles: ["Mars Donovan (Supporting)"]
+    },
+    {
       title: "WOE.BEGONE",
       artwork: "images/wbg.jpg",
       url: "https://woebegonepod.com/",
@@ -32,22 +40,6 @@ export const audiodramas = [
       roles: ["Cooper Hackl (Principal)"]
     },
     {
-      title: "Soul Operator",
-      artwork: "images/soul-operator.jfif",
-      url: "https://www.souloperatorpod.com/",
-      years: "2024 – Present",
-      episodes: 7,
-      roles: ["Extra (Bit)"]
-    },
-    {
-      title: "[REDACTED]",
-      artwork: "images/redacted.jfif",
-      url: "https://www.theredactedunit.com/",
-      years: "2025 – Present",
-      episodes: 1,
-      roles: ["Mars Donovan (Supporting)"]
-    },
-    {
       title: "Nowhere, On Air",
       artwork: "images/nowhere-on-air.jfif",
       url: "https://nowhereonairpodcast.weebly.com/",
@@ -68,12 +60,28 @@ export const audiodramas = [
       ]
     },
     {
+      title: "Soul Operator",
+      artwork: "images/soul-operator.jfif",
+      url: "https://www.souloperatorpod.com/",
+      years: "2024 – Present",
+      episodes: 7,
+      roles: ["Extra (Bit)"]
+    },
+    {
       title: "The Storage Papers",
       artwork: "images/tsp.jfif",
       url: "https://www.thestoragepapers.com/",
       years: "2024 – 2025",
       episodes: 2,
       roles: ["Jeremy Jones (Supporting)", "Oliver Daniels (Bit)"]
+    },
+    {
+      title: "Hollow Disciple",
+      artwork: "images/hollow.jfif",
+      url: "https://open.spotify.com/show/0bgRcn7ZytTcnCERJAqnPN",
+      years: "2025",
+      episodes: 2,
+      roles: ["Officer Lowley (Supporting)"]
     },
     {
       title: "Wake of Corrosion",
@@ -116,6 +124,22 @@ export const audiodramas = [
       roles: ["Bryce, Self (Principal)"]
     },
     {
+      title: "Among the Stacks",
+      artwork: "images/stacks.jfif",
+      url: "https://open.spotify.com/show/3IZYlXpAZohHclr2xgjqum",
+      years: "2023",
+      episodes: 2,
+      roles: ["Dr. Arawn (Principal)", "Guest Narrator (Supporting)"]
+    },
+    {
+      title: "400 Words a Horror",
+      artwork: "images/400.jfif",
+      url: "https://linktr.ee/400wordsahorror",
+      years: "2024",
+      episodes: 2,
+      roles: ["The Contractor (Principal)", "Television Host (Supporting)"]
+    },
+    {
       title: "SCP Un[REDACTED]",
       artwork: "images/scp.jfif",
       url: "https://open.spotify.com/show/5pclusbHm5bPh6y9ufRJA6",
@@ -132,30 +156,6 @@ export const audiodramas = [
       roles: ["Winston (Supporting)"]
     },
     {
-      title: "400 Words a Horror",
-      artwork: "images/400.jfif",
-      url: "https://linktr.ee/400wordsahorror",
-      years: "2024",
-      episodes: 2,
-      roles: ["The Contractor (Principal)", "Television Host (Supporting)"]
-    },
-    {
-      title: "Among the Stacks",
-      artwork: "images/stacks.jfif",
-      url: "https://open.spotify.com/show/3IZYlXpAZohHclr2xgjqum",
-      years: "2023",
-      episodes: 2,
-      roles: ["Dr. Arawn (Principal)", "Guest Narrator (Supporting)"]
-    },
-    {
-      title: "No Return",
-      artwork: "images/no-return.jfif",
-      url: "https://noreturn.buzzsprout.com/",
-      years: "2024 – Present",
-      episodes: 3,
-      roles: ["Biksune Ree (Supporting)", "Saurian 2, Villager (Bit)"]
-    },
-    {
       title: "Audistorium",
       artwork: "images/audistorium.jfif",
       url: "https://open.spotify.com/show/5x4LSTlQ8XQe3b6a5aITvX",
@@ -164,12 +164,12 @@ export const audiodramas = [
       roles: ["Prey 2 (Bit)"]
     },
     {
-      title: "Hollow Disciple",
-      artwork: "images/hollow.jfif",
-      url: "https://open.spotify.com/show/0bgRcn7ZytTcnCERJAqnPN",
-      years: "2025",
-      episodes: 2,
-      roles: ["Officer Lowley (Supporting)"]
+      title: "No Return",
+      artwork: "images/no-return.jfif",
+      url: "https://noreturn.buzzsprout.com/",
+      years: "2024 – Present",
+      episodes: 3,
+      roles: ["Biksune Ree (Supporting)", "Saurian 2, Villager (Bit)"]
     }
   ];
 

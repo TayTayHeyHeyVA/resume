@@ -348,3 +348,44 @@ a:hover {
     font-size: 0.9rem;
   }
 }
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--surface-raised);
+}
+
+.social-icons img {
+  width: 20px;
+  height: 30px;
+  filter: brightness(0) invert(1); /* makes SVGs white */
+  opacity: 0.9;
+}

@@ -445,6 +445,7 @@ a:hover {
   object-position: center top;
 
   display: block;
+  transform: scaleX(-1);
 }
 
 @media (max-width: 768px) {
@@ -463,6 +464,7 @@ a:hover {
 
   .headshot {
     object-fit: contain;
+    transform: scaleX(1);
   }
 
   .headshot-wrap {
